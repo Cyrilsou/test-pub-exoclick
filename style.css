@@ -1,99 +1,270 @@
-/* Réinitialisation de base */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
+
+/* Réinitialisation et styles globaux */
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.7;
+    font-size: 16px;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Typographie */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Structure & Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: 2.5fr 1fr;
+    }
+}
+
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 20px;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+header .tagline {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
 }
 
 nav ul {
     list-style: none;
-    padding: 1rem 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
 }
 
 nav a {
-    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #495057;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    margin: 20px auto;
-    padding: 0 20px;
-    max-width: 1200px;
-}
-
-main {
-    flex: 3;
-    margin-right: 20px;
-}
-
+/* Main Content & Articles */
 article {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    background: #ffffff;
+    padding: 0; /* Padding will be on a child element */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* To contain the image radius */
 }
 
-aside {
-    flex: 1;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    height: fit-content;
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
+.article-content {
+    padding: 30px;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.article-meta span {
+    margin-right: 15px;
+}
+
+article h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+article p {
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    font-weight: 700;
+    display: inline-block;
+}
+
+.social-share {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.social-share a {
+    margin-right: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-share a:hover {
+    opacity: 1;
+}
+
+/* Sidebar */
+.widget {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.widget h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+
+.widget ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
+    padding: 40px 20px;
+    background: #343a40;
+    color: #adb5bd;
+    margin-top: 30px;
 }
 
-/* Styles pour les emplacements publicitaires */
+.footer-nav {
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    color: #f8f9fa;
+    margin: 0 15px;
+}
+
+.footer-nav a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 1;
+}
+
+/* Ad Placeholders */
 .ad-placeholder {
-    background-color: #e0e0e0;
-    border: 2px dashed #ccc;
+    background-color: #f1f3f5;
+    border: 1px dashed #ced4da;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-weight: bold;
-    color: #555;
-    margin: 20px 0;
+    font-weight: normal;
+    font-style: italic;
+    color: #868e96;
+    margin: 25px 0;
+    min-height: 90px;
 }
 
-.ad-banner-header {
-    width: 728px;
-    height: 90px;
-    margin: 20px auto;
-}
-
-.ad-in-article {
-    width: 300px;
+.ad-leaderboard, .ad-banner-header {
     height: 250px;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ad-banner-footer {
+    height: 90px;
+    width: 100%;
+    max-width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
 .ad-skyscraper {
@@ -102,23 +273,197 @@ footer {
     margin: 0 auto;
 }
 
-.ad-banner-footer {
-    width: 728px;
-    height: 90px;
-    margin: 20px auto;
+.ad-square {
+    width: 100%;
+    height: 250px;
 }
 
-/* Styles pour la bannière flottante (sticky) */
+.ad-in-article {
+    width: 300px;
+    height: 250px;
+    margin: 25px auto; /* Centré avec marges verticales */
+    clear: both;
+}
+
+.ad-in-feed {
+    width: 100%;
+    max-width: 728px;
+    height: 90px;
+    margin: 30px auto;
+}
+
 .ad-sticky-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 5px 0;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Cookie Banner */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: -150px; /* Initially hidden */
+    left: 0;
+    width: 100%;
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.cookie-consent-banner p {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.cookie-consent-banner p a {
+    color: #80bdff;
+}
+
+.cookie-consent-banner button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-consent-banner button:hover {
+    background-color: #0056b3;
+}
+
+.cookie-consent-banner.active {
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    article h2 { font-size: 1.5rem; }
+    .ad-banner-header, .ad-banner-footer {
+        width: 100%;
+        max-width: 320px;
+        height: 100px;
+    }
+    .ad-leaderboard {
+        height: 100px;
+    }
+    .cookie-consent-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cookie-consent-banner button {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+/* Formulaire de Contact */
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #495057;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.submit-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* === Nouveaux formats publicitaires === */
+.ad-halfpage {
+    width: 300px;
+    height: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.floating-ad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 250px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.floating-ad.hidden {
+    display: none;
+}
+
+.floating-ad .floating-ad-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #6c757d;
+}
+
+/* Ad placeholder generic tweaks pour nouveaux formats */
+.ad-placeholder {
+    background-color: #f1f3f5;
+    color: #868e96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
 } 

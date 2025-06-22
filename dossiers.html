@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiers - Le Média Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scripts (NeverBlock, etc.) identiques à la page actualites.html -->
+    <script type="text/javascript" src="/nb/fro_lo.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // ... (code NeverBlock complet ici)
+            var ExoLoader=myEl.el;
+            ExoLoader.addZone({"idzone":"IDZONE_HEADER_728x90", "container": document.getElementById('banner-header-container')});
+            ExoLoader.addZone({"idzone":"IDZONE_LEADERBOARD_970x250", "container": document.getElementById('leaderboard-ad-container')});
+            ExoLoader.addZone({"idzone":"IDZONE_IN_ARTICLE_1", "container": document.getElementById('in-article-ad-container-1')});
+            ExoLoader.addZone({"idzone":"5651216", "container": document.getElementById('sticky-banner-container-child')});
+            ExoLoader.addZone({"idzone":"IDZONE_POP_1"});
+            ExoLoader.serve({"script_url":"/nb/ba_lo.php"});
+        })();
+    </script>
+    
+    <header>
+        <h1>Le Média Tech</h1>
+        <p class="tagline">Nos dossiers et analyses approfondies.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="dossiers.html">Dossiers</a></li>
+                <li><a href="tests.html">Tests</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="banner-header-container" class="ad-placeholder ad-banner-header">Bannière 728x90</div>
+    </header>
+
+    <div class="container">
+        <main id="main-content">
+            <div id="leaderboard-ad-container" class="ad-placeholder ad-leaderboard">Leaderboard 970x250</div>
+
+            <article>
+                <img src="https://picsum.photos/800/400?random=6" alt="Image">
+                <div class="article-content">
+                    <h2>Dossier : L'informatique quantique est-elle pour demain ?</h2>
+                    <p>Au-delà du buzz, où en est réellement l'informatique quantique ? Nous décryptons les avancées, les défis et le potentiel de cette technologie de rupture.</p>
+                    <div id="in-article-ad-container-1" class="ad-placeholder ad-in-article">Publicité 300x250</div>
+                    <a href="#" class="read-more">Lire la suite...</a>
+                </div>
+            </article>
+            
+            <!-- plus d'articles ici -->
+        </main>
+        <aside>
+            <div class="widget">
+                <h3>Publicité</h3>
+                <div class="ad-placeholder ad-skyscraper">Verticale 160x600</div>
+            </div>
+            <div class="widget">
+                <h3>Sponsor</h3>
+                <div class="ad-placeholder ad-square">
+                    Carré 250x250
+                </div>
+            </div>
+            <div class="widget">
+                <h3>Newsletter</h3>
+                <p>Abonnez-vous pour recevoir le meilleur de la tech chaque semaine.</p>
+                <input type="email" placeholder="Votre email">
+                <button>S'inscrire</button>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="a-propos.html">À Propos</a>
+            <a href="contact.html">Contact</a>
+            <a href="politique.html">Politique de confidentialité</a>
+        </div>
+        <div class="footer-social">
+            <a href="#" title="Facebook"><img src="https://img.icons8.com/fluent/32/000000/facebook-new.png"/></a>
+            <a href="#" title="Twitter"><img src="https://img.icons8.com/fluent/32/000000/twitter.png"/></a>
+            <a href="#" title="LinkedIn"><img src="https://img.icons8.com/fluent/32/000000/linkedin.png"/></a>
+        </div>
+        <p>&copy; 2024 Le Média Tech.</p>
+    </footer>
+
+    <div class="ad-sticky-banner" id="sticky-banner-container"><div id="sticky-banner-container-child"></div></div>
+    
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+        <p>Ce site utilise des cookies pour améliorer votre expérience et pour nos besoins publicitaires. En continuant, vous acceptez notre <a href="politique.html">politique de confidentialité</a>.</p>
+        <button id="accept-cookie">J'ai compris</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

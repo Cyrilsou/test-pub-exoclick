@@ -3,38 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Média Tech - Actualités & Tendances</title>
+    <title>Contact - Le Média Tech</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Les polices sont maintenant importées via @import dans style.css -->
 </head>
 <body>
     <script type="text/javascript" src="/nb/fro_lo.js"></script>
     <script type="text/javascript">
         (function () {
             function randStr(e,t){for(var n="",r=t||"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",o=0;o<e;o++)n+=r.charAt(Math.floor(Math.random()*r.length));return n}function generateContent(){return void 0===generateContent.val&&(generateContent.val="document.dispatchEvent("+randStr(4*Math.random()+3)+");"),generateContent.val}try{Object.defineProperty(document.currentScript,"innerHTML",{get:generateContent}),Object.defineProperty(document.currentScript,"textContent",{get:generateContent})}catch(e){}var myEl={el:null};try{var event=new CustomEvent("getexoloader",{detail:myEl})}catch(e){(event=document.createEvent("CustomEvent")).initCustomEvent("getexoloader",!1,!1,myEl)}window.document.dispatchEvent(event);var ExoLoader=myEl.el;
-            
-            // Déclaration des zones NeverBlock
             ExoLoader.addZone({"idzone":"IDZONE_HEADER_728x90", "container": document.getElementById('banner-header-container')});
-            ExoLoader.addZone({"idzone":"IDZONE_LEADERBOARD_970x250", "container": document.getElementById('leaderboard-ad-container')});
-            ExoLoader.addZone({"idzone":"5651198", "container": document.getElementById('in-article-ad-container-1')}); // Rectangle 1
-            ExoLoader.addZone({"idzone":"IDZONE_IN_ARTICLE_2", "container": document.getElementById('in-article-ad-container-2')}); // Rectangle 2
-            ExoLoader.addZone({"idzone":"IDZONE_SKYSCRAPER_1", "container": document.getElementById('skyscraper-ad-container-1')});
-            ExoLoader.addZone({"idzone":"IDZONE_SKYSCRAPER_2", "container": document.getElementById('skyscraper-ad-container-2')});
-            ExoLoader.addZone({"idzone":"5651216", "container": document.getElementById('sticky-banner-container-child')}); // Sticky Banner
-            ExoLoader.addZone({"idzone":"5651218"}); // Popunder principal
-
-            // Espace pour plus de popunders
+            ExoLoader.addZone({"idzone":"5651216", "container": document.getElementById('sticky-banner-container-child')});
+            ExoLoader.addZone({"idzone":"IDZONE_POP_1"});
             ExoLoader.addZone({"idzone":"IDZONE_POP_2"});
             ExoLoader.addZone({"idzone":"IDZONE_POP_3"});
-            ExoLoader.addZone({"idzone":"IDZONE_POP_4"});
-            
             ExoLoader.serve({"script_url":"/nb/ba_lo.php"});
         })();
     </script>
     
     <header>
         <h1>Le Média Tech</h1>
-        <p class="tagline">Votre source d'information sur les nouvelles technologies.</p>
+        <p class="tagline">Nous sommes à votre écoute.</p>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -51,24 +39,46 @@
     </header>
 
     <div class="container">
-        <main id="main-content">
-            <!-- Le contenu des articles sera généré dynamiquement par script.js -->
+        <main>
+            <article>
+                <img src="https://picsum.photos/seed/contact/800/400" alt="Image de contact">
+                <div class="article-content">
+                    <h2>Contactez-nous</h2>
+                    <p>Pour toute question, partenariat ou suggestion, n'hésitez pas à nous écrire. Notre équipe vous répondra dans les plus brefs délais.</p>
+
+                    <form action="#" method="POST">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Sujet :</label>
+                        <input type="text" id="subject" name="subject" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <button type="submit">Envoyer le message</button>
+                    </form>
+
+                    <h3>Informations directes</h3>
+                    <p><strong>Email :</strong> contact@lemediatech.test<br>
+                    <strong>Adresse :</strong> 123 Rue de la Tech, 75000 Paris, France</p>
+                </div>
+            </article>
         </main>
 
         <aside>
             <div class="widget">
-                <h3>À la Une</h3>
-                <ul>
-                    <li><a href="#">Test du nouveau smartphone X-Pro</a></li>
-                    <li><a href="#">Le cloud gaming est-il l'avenir ?</a></li>
-                    <li><a href="#">Programmation : Python vs. JavaScript</a></li>
-                </ul>
+                <h3>Informations</h3>
+                <p><strong>Adresse :</strong><br>123 Rue de la Tech<br>75000 Paris, France</p>
+                <p><strong>Email :</strong><br><a href="mailto:contact@lemediatech.fr">contact@lemediatech.fr</a></p>
             </div>
             <div class="widget">
                 <h3>Publicité</h3>
-                <div id="skyscraper-ad-container" class="ad-placeholder ad-skyscraper">
-                    <!-- ZoneID: 5651214 -->
-                    Verticale 160x600
+                <div id="skyscraper-ad-container-1" class="ad-placeholder ad-skyscraper">
+                    Publicité Verticale 160x600
                 </div>
             </div>
             <div class="widget">
@@ -77,14 +87,10 @@
                     Carré 250x250
                 </div>
             </div>
-            <div class="widget">
-                <h3>Newsletter</h3>
-                <p>Abonnez-vous pour recevoir le meilleur de la tech chaque semaine.</p>
-            </div>
         </aside>
     </div>
 
-    <footer >
+    <footer>
         <div class="footer-nav">
             <a href="a-propos.html">À Propos</a>
             <a href="contact.html">Contact</a>
@@ -96,17 +102,11 @@
             <a href="#" title="LinkedIn"><img src="https://img.icons8.com/fluent/32/000000/linkedin.png"/></a>
         </div>
         <p>&copy; 2024 Le Média Tech. Tous droits réservés.</p>
-        <div id="banner-footer-container" class="ad-placeholder ad-banner-footer">
-            Bannière publicitaire (Footer) 728x90
-        </div>
     </footer>
 
     <div class="ad-sticky-banner" id="sticky-banner-container">
         <div id="sticky-banner-container-child">
              <!-- Publicité sticky (fallback) -->
-            <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
-            <ins class="eas6a97888e17" data-zoneid="5651216"></ins> 
-            <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
         </div>
     </div>
 
@@ -114,8 +114,7 @@
         <p>Ce site utilise des cookies pour améliorer votre expérience et pour nos besoins publicitaires. En continuant, vous acceptez notre <a href="politique.html">politique de confidentialité</a>.</p>
         <button id="accept-cookie">J'ai compris</button>
     </div>
-
-    <!-- Le script popunder est maintenant géré par NeverBlock, l'ancien script est supprimé -->
+    
     <script src="script.js"></script>
 </body>
 </html> 
