@@ -7,26 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script type="text/javascript" src="/nb/fro_lo.js"></script>
-    <script type="text/javascript">
-        // Le même script NeverBlock que sur l'index
-        (function () {
-            function randStr(e,t){for(var n="",r=t||"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",o=0;o<e;o++)n+=r.charAt(Math.floor(Math.random()*r.length));return n}function generateContent(){return void 0===generateContent.val&&(generateContent.val="document.dispatchEvent("+randStr(4*Math.random()+3)+");"),generateContent.val}try{Object.defineProperty(document.currentScript,"innerHTML",{get:generateContent}),Object.defineProperty(document.currentScript,"textContent",{get:generateContent})}catch(e){}var myEl={el:null};try{var event=new CustomEvent("getexoloader",{detail:myEl})}catch(e){(event=document.createEvent("CustomEvent")).initCustomEvent("getexoloader",!1,!1,myEl)}window.document.dispatchEvent(event);var ExoLoader=myEl.el;
-            ExoLoader.addZone({"idzone":"IDZONE_HEADER_728x90", "container": document.getElementById('banner-header-container')});
-            ExoLoader.addZone({"idzone":"IDZONE_LEADERBOARD_970x250", "container": document.getElementById('leaderboard-ad-container')});
-            ExoLoader.addZone({"idzone":"5651198", "container": document.getElementById('in-article-ad-container-1')});
-            ExoLoader.addZone({"idzone":"IDZONE_IN_ARTICLE_2", "container": document.getElementById('in-article-ad-container-2')});
-            ExoLoader.addZone({"idzone":"IDZONE_SKYSCRAPER_1", "container": document.getElementById('skyscraper-ad-container-1')});
-            ExoLoader.addZone({"idzone":"IDZONE_SKYSCRAPER_2", "container": document.getElementById('skyscraper-ad-container-2')});
-            ExoLoader.addZone({"idzone":"5651216", "container": document.getElementById('sticky-banner-container-child')});
-            ExoLoader.addZone({"idzone":"5651218"});
-            ExoLoader.addZone({"idzone":"IDZONE_POP_2"});
-            ExoLoader.addZone({"idzone":"IDZONE_POP_3"});
-            ExoLoader.addZone({"idzone":"IDZONE_POP_4"});
-            ExoLoader.serve({"script_url":"/nb/ba_lo.php"});
-        })();
-    </script>
-    
     <header>
         <h1>Le Média Tech</h1>
         <p class="tagline">Toutes les actualités du monde de la Tech.</p>
